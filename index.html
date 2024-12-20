@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Inventory Management</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">Business Inventory Management</h1>
+        
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Product Name" required>
+            <select id="product-category" required>
+                <option value="">Select Category</option>
+                <option value="Perfume">Khumra</option>
+                <option value="Turaren Wuta">Turaren Wuta</option>
+                <option value="Accessories">Khamshi Accessories</option>
+            </select>
+            <input type="number" id="product-quantity" placeholder="Quantity" required min="0">
+            <input type="number" id="product-price" placeholder="Price (NGN)" required min="0" step="0.01">
+            <button type="submit">Add Product</button>
+        </form>
+
+        <div id="last-saved-status" class="status-text"></div>
+
+        <div id="inventory-list">
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price (NGN)</th>
+                        <th>Total Value</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    <!-- Inventory items will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="inventory.js"></script>
+</body>
+</html>
